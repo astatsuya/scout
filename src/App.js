@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form'
 import Result from './components/Result'
+import PartOfResult from './components/PartOfResult'
+
 
 class App extends Component {
   constructor(props) {
@@ -9,10 +11,11 @@ class App extends Component {
 
     this.state = {
       name: "name",
-      happening: ['excellent', 'good', 'bad', 'poor', 'excellent']
+      happening: []
     }
 
     this.addHappening = this.addHappening.bind(this)
+    this.resetCurrentHappening = this.resetCurrentHappening.bind(this)
   }
 
 
@@ -20,6 +23,12 @@ class App extends Component {
     let happeningArray = this.state.happening.concat([newHappening.target.value])
     this.setState({
       happening: happeningArray
+    })
+  }
+
+  resetCurrentHappening () {
+    this.setState({
+      happening: []
     })
   }
 
@@ -31,6 +40,7 @@ class App extends Component {
           name={this.state.name}
           happening={this.state.happening}
         />
+        <PartOfResult happening={this.state.happening} resetCurrentHappening={this.resetCurrentHappening} />
       </div>
     );
   }

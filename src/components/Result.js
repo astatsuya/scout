@@ -28,7 +28,6 @@ const Result = (props) => {
 
   return(
     <div>
-      <h3>{props.name}</h3>
       <ul>
         <li>Excellent: {AmountExcellent}回 {percentExcellent}</li>
         <li>Good: {AmountGood}回 {percentGood}</li>
