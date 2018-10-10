@@ -15,13 +15,6 @@ class App extends Component {
     this.addHappening = this.addHappening.bind(this)
   }
 
-  onClickHandler(addHappening) {
-    let newHappening = this.state.happening.concat(addHappening);
-    this.setState({
-      happening: newHappening
-    })
-    console.log(this.state.happening)
-  }
 
   addHappening(newHappening) {
     let happeningArray = this.state.happening.concat([newHappening.target.value])
