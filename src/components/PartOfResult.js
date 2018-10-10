@@ -1,10 +1,11 @@
 import React from 'react';
+import PreviousResult from './PreviousResult'
 
 class PartOfResult extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      savedHappening: '0'
+      savedHappening: []
     }
 
     this.savedHappeningHandler = this.savedHappeningHandler.bind(this)
@@ -27,7 +28,7 @@ class PartOfResult extends React.Component {
             onClick={this.savedHappeningHandler}
           >Save current status</button>
         </p>
-        <p>{this.state.savedHappening}</p>
+        <PreviousResult savedHappening={this.state.savedHappening} />
       </div>
     )
   }
