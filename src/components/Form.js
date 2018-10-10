@@ -5,30 +5,26 @@ const Form = (props) => {
     <div>
         <button
           type="submit"
-          name="excellent"
           value="excellent"
-          onClick={props.addEvent}
+          onClick={props.addHappening}
         >excellent</button>
 
         <button
           type="submit"
-          name="good"
           value="good"
-          onClick={props.addEvent}
+          onClick={props.addHappening}
         >good</button>
 
         <button
           type="submit"
-          name="bad"
           value="bad"
-          onClick={props.addEvent}
+          onClick={props.addHappening}
         >bad</button>
 
         <button
           type="submit"
-          name="poor"
           value="poor"
-          onClick={props.addEvent}
+          onClick={props.addHappening}
         >poor</button>
 
     </div>

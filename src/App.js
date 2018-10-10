@@ -33,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form addEvent={this.addHappening} />
+        <Form addHappening={this.addHappening} />
         <Result
           name={this.state.name}
           happening={this.state.happening}
