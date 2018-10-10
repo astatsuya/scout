@@ -12,8 +12,7 @@ class App extends Component {
       happening: ['excellent', 'good', 'bad', 'poor', 'excellent']
     }
 
-    this.onClickHandler = this.onClickHandler.bind(this)
-    this.sendName = this.sendName.bind(this)
+    this.addHappening = this.addHappening.bind(this)
   }
 
   onClickHandler(addHappening) {
@@ -24,7 +23,7 @@ class App extends Component {
     console.log(this.state.happening)
   }
 
-  sendName(newHappening) {
+  addHappening(newHappening) {
     let happeningArray = this.state.happening.concat([newHappening.target.value])
     this.setState({
       happening: happeningArray
@@ -34,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form handleSubmit={this.sendName} />
+        <Form addEvent={this.addHappening} />
         <Result
           name={this.state.name}
           happening={this.state.happening}

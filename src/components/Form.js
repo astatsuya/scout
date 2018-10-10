@@ -7,28 +7,28 @@ const Form = (props) => {
           type="submit"
           name="excellent"
           value="excellent"
-          onClick={props.handleSubmit}
+          onClick={props.addEvent}
         >excellent</button>
 
         <button
           type="submit"
           name="good"
           value="good"
-          onClick={props.handleSubmit}
+          onClick={props.addEvent}
         >good</button>
 
         <button
           type="submit"
           name="bad"
           value="bad"
-          onClick={props.handleSubmit}
+          onClick={props.addEvent}
         >bad</button>
 
         <button
           type="submit"
           name="poor"
           value="poor"
-          onClick={props.handleSubmit}
+          onClick={props.addEvent}
         >poor</button>
 
     </div>
