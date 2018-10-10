@@ -20,20 +20,22 @@ const Result = (props) => {
     }
   }
 
-  const percentExcellent = `${AmountExcellent / AmountHappening * 100}%`;
-  const percentGood = `${AmountGood / AmountHappening * 100}%`;
-  const percentBad = `${AmountBad / AmountHappening * 100}%`;
-  const percentPoor = `${AmountPoor / AmountHappening * 100}%`;
+  const percentExcellent = `${(AmountExcellent / AmountHappening * 100).toFixed(2)}%`;
+  const percentGood = `${(AmountGood / AmountHappening * 100).toFixed(2)}%`;
+  const percentBad = `${(AmountBad / AmountHappening * 100).toFixed(2)}%`;
+  const percentPoor = `${(AmountPoor / AmountHappening * 100).toFixed(2)}%`;
 
 
   return(
     <div>
-      {AmountHappening}
-      <p>{AmountExcellent} {percentExcellent}</p>
-      <p>{AmountGood} {percentGood} </p>
-      <p>{AmountBad} {percentBad} </p>
-      <p>{AmountPoor} {percentPoor} </p>
-
+      <h3>{props.name}</h3>
+      <ul>
+        <li>Excellent: {AmountExcellent}回 {percentExcellent}</li>
+        <li>Good: {AmountGood}回 {percentGood}</li>
+        <li>Bad: {AmountBad}回 {percentBad}</li>
+        <li>Poor: {AmountPoor}回 {percentPoor}</li>
+        <li>Total: {AmountHappening}回</li>
+      </ul>
     </div>
   )
 }
