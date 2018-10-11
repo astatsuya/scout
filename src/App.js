@@ -17,7 +17,6 @@ class App extends Component {
     this.resetCurrentHappening = this.resetCurrentHappening.bind(this)
   }
 
-
   addHappening(newHappening) {
     let happeningArray = this.state.happening.concat([newHappening.target.value])
     this.setState({
