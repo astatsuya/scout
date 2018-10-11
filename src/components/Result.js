@@ -34,6 +34,9 @@ const Result = (props) => {
         <li>Bad: {AmountBad}回 {percentBad}</li>
         <li>Poor: {AmountPoor}回 {percentPoor}</li>
         <li>Total: {AmountHappening}回</li>
+        <li>
+          <button onClick={props.resetCurrentHappening}>Reset</button>
+        </li>
       </ul>
     </div>
   )

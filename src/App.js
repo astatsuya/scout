@@ -10,7 +10,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      name: "name",
       happening: []
     }
 
@@ -37,10 +36,10 @@ class App extends Component {
       <div className="App">
         <Form addHappening={this.addHappening} />
         <Result
-          name={this.state.name}
           happening={this.state.happening}
+          resetCurrentHappening={this.resetCurrentHappening}
         />
-        <PreviousResult happening={this.state.happening} resetCurrentHappening={this.resetCurrentHappening} />
+        <PreviousResult happening={this.state.happening} />
       </div>
     );
   }
