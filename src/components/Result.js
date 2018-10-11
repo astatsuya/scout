@@ -25,8 +25,6 @@ const Result = (props) => {
   const percentBad = (AmountBad / AmountHappening) ? (AmountBad / AmountHappening * 100).toFixed(2) : "0.00";
   const percentPoor = (AmountPoor / AmountHappening) ? (AmountPoor / AmountHappening * 100).toFixed(2) : "0.00";
 
-
-
   return(
     <div>
       <ul>
