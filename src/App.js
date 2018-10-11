@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form'
 import Result from './components/Result'
-import PartOfResult from './components/PartOfResult'
+import PreviousResult from './components/PreviousResult'
 
 
 class App extends Component {
@@ -40,7 +40,7 @@ class App extends Component {
           name={this.state.name}
           happening={this.state.happening}
         />
-        <PartOfResult happening={this.state.happening} resetCurrentHappening={this.resetCurrentHappening} />
+        <PreviousResult happening={this.state.happening} resetCurrentHappening={this.resetCurrentHappening} />
       </div>
     );
   }
