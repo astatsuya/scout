@@ -2,30 +2,30 @@ import React from 'react';
 
 const Form = (props) => {
   return(
-    <div>
+    <div className="Form">
       <button
         type="submit"
         value="excellent"
         onClick={props.addHappening}
-      >excellent</button>
+      >Excellent</button>
 
       <button
         type="submit"
         value="good"
         onClick={props.addHappening}
-      >good</button>
+      >Good</button>
 
       <button
         type="submit"
         value="bad"
         onClick={props.addHappening}
-      >bad</button>
+      >Bad</button>
 
       <button
         type="submit"
         value="poor"
         onClick={props.addHappening}
-      >poor</button>
+      >Poor</button>
     </div>
   )
 }

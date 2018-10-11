@@ -6,10 +6,12 @@ const PreviousResult = (props) => {
   })
 
   return(
-    <div>
-      <ul>
-        {lastRecord}
-      </ul>
+    <div className="PreviousResult">
+      <div className="Previous-ul">
+        <ul>
+          {lastRecord}
+        </ul>
+      </div>
     </div>
   )
 }

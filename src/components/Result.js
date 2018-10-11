@@ -26,17 +26,37 @@ const Result = (props) => {
   const percentPoor = (AmountPoor / AmountHappening) ? (AmountPoor / AmountHappening * 100).toFixed(2) : "0.00";
 
   return(
-    <div>
-      <ul>
-        <li>Excellent: {AmountExcellent}回 {percentExcellent}%</li>
-        <li>Good: {AmountGood}回 {percentGood}%</li>
-        <li>Bad: {AmountBad}回 {percentBad}%</li>
-        <li>Poor: {AmountPoor}回 {percentPoor}%</li>
-        <li>Total: {AmountHappening}回</li>
-        <li>
-          <button onClick={props.resetCurrentHappening}>Reset</button>
-        </li>
-      </ul>
+    <div className="Result">
+      <div className="top-part">
+        <div className="left-container">
+          <ul>
+            <li>Excellent:</li>
+            <li>Good:</li>
+            <li>Bad:</li>
+            <li>Poor:</li>
+          </ul>
+        </div>
+        <div className="middle-container">
+          <ul>
+            <li>{AmountExcellent}回</li>
+            <li>{AmountGood}回</li>
+            <li>{AmountBad}回</li>
+            <li>{AmountPoor}回</li>
+          </ul>
+        </div>
+        <div className="right-container">
+          <ul>
+            <li>{percentExcellent}%</li>
+            <li>{percentGood}%</li>
+            <li>{percentBad}%</li>
+            <li>{percentPoor}%</li>
+          </ul>
+        </div>
+      </div>
+      <div className="bottom-part">
+        <p>Total: {AmountHappening}回</p>
+        <button onClick={props.resetCurrentHappening}>Reset</button>
+      </div>
     </div>
   )
 }
